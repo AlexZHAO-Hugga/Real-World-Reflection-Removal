@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Reflection-free Flash-only Dataset</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="https://fonts.googleapis.com/css?family=Varela" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+<!-- <script> 
+    $(function(){
+      $("#leaderboard_table").load("./table/leaderboard.html"); 
+    });
+</script> -->
+</head>
+
+
+
+
+
+<body>
+<div id="wrapper">
+	<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1><a style="text-transform: none;" href="#header">Reflection-free Flash-only Dataset</a></h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li><a href="index.html" accesskey="1" title="">Homepage</a></li>
+				<li class="current_page_item">
+					<div class="dropdown">
+						<a class="dropbtn">Dataset</a>
+						<div class="dropdown-content">
+							<a href="Raw-RGB Dataset.html">Raw-RGB</a>
+						    <a href="Polarized Dataset.html">Polarized</a>
+						    <a href="Flash-only Dataset.html">Flash-only</a>
+						</div>
+					</div>
+				</li>			
+			</ul>
+		</div>
+	</div>
+	</div>
+
+	<div id="extra" class="container" style="border-bottom: 2px solid #E3E3E3;">
+		<div class="title" style="margin-bottom: 1em;">
+			<h2>Introduction</h2>
+		</div>
+
+		
+			<p style="text-align: left;">We propose a simple yet effective reflection-free cue for robust reflection removal from a pair of flash and ambient (no-flash) images. The reflection-free cue exploits a flash-only image obtained by subtracting the ambient image from the corresponding flash image in raw data space. The flash-only image is equivalent to an image taken in a dark environment with only a flash on. We observe that this flash-only image is visually reflection-free, and thus it can provide robust cues to infer the reflection in the ambient image. Since the flash-only image usually has artifacts, we further propose a dedicated model that not only utilizes the reflection-free cue but also avoids introducing artifacts, which helps accurately estimate reflection and transmission. Our experiments on real-world images with various types of reflection demonstrate the effectiveness of our model with reflection-free flash-only cues: our model outperforms state-of-the-art reflection removal approaches by more than 5.23dB in PSNR, 0.04 in SSIM, and 0.068 in LPIPS.</p>
+		
+
+		<div id="three-column">
+
+			<div class="boxA">
+				<div class="box">
+					<a href="https://arxiv.org/abs/2103.04273">
+	                    <img src="./images/paper.PNG" width="60%" height="120px" style="border: 2px outset gray; border-radius: 10px;"><br>
+	                </a>
+	                <p></p>
+	                <p></p>
+	                <a href="https://arxiv.org/abs/2103.04273" style=" font-size: 20px; color: black">
+	                	<p style="margin-block-end: 0em;"><strong>Paper</strong></p>
+	                </a>
+                </div>
+			</div>
+
+			<div class="boxB">
+				<div class="box">
+					<a href="">
+	                    <img src="./images/youtube_icon.png" width="60%" height="120px"><br>	                    
+	                </a>
+	                <p></p>
+	                <p></p>
+	                <a href="" style=" font-size: 20px; color: black">
+	                	<p style="margin-block-end: 0em;"><strong>Video (To Be Released)</strong></p>
+	                </a>
+				</div>
+			</div>
+
+			<div class="boxC">
+				<div class="box"> 
+					<a href="https://github.com/ChenyangLEI/flash-reflection-removal">
+                        <img src="./images/github_icon.png" width="60%" height="120px"><br>                              
+                    </a>
+                    <p></p>
+                    <p></p>
+                    <a href="https://github.com/ChenyangLEI/flash-reflection-removal" style=" font-size: 20px; color: black">
+	                	<p style="margin-block-end: 0em;"><strong>Code</strong></p>
+	                </a>
+				</div>
+			</div>
+
+			<div class="container" style="width: 100%; overflow: hidden;">
+				<h3>Motivation</h3>
+				<ul style="list-style-type: disc; line-height: 180%; font-size: 20px;">
+	              <li>Most existing reflection removal methods impose strict assumptions on reflection (e.g., the reflection is blurry).</li>
+	              <li>Algorithms might fail when the apperance of real-world reflection is different with the assumption.</li>
+	              <li>Can we find a cue so that different reflection can be robustly removed?</li>
+	              <li>Our proposed cue can remove sharp or blurry reflection, weak or strong reflection, reflection with the ghosting cue or not.</li>
+	            </ul>      		
+			</div>
+
+		</div>
+	</div>
+
+
+
+
+
+	<div id="Dataset" class="container" style="border-bottom: 2px solid #E3E3E3;">
+		<div class="title" style="margin-bottom: 1em; text-align: center">
+			<h2>Dataset</h2>
+		</div>
+		
+
+		<ul class="actions">
+			<li><a href="https://hkustconnect-my.sharepoint.com/:u:/g/personal/cleiaa_connect_ust_hk/EWv1afaxrhFKlbT7iX0b8FMB8R1ZeNyUWRQM__A_SPkVGQ?e=OoAlID" class="button">Download Dataset (X.XXGB)</a></li>
+		</ul>
+
+
+		
+		<h3>Reflection-free Flash-only Cues (RFC)</h3>
+
+		<h4>What is flash-only?</h4>
+		<ul style="list-style-type: disc; line-height: 180%; font-size: 20px;">
+          <li>Flash-only image = Flash image - Ambient image on linear space.</li>
+          <li>The flash-only image is equivalent to an image captured in a completely dark environment. However, it is not directly captured in the dark. Instead, it is obtained by subtracting the ambient image from the corresponding flash image in raw data space.</li>
+        </ul>
+
+        <h4>Why is it reflection-free?</h4>
+		<ul style="list-style-type: disc; line-height: 180%; font-size: 20px;">
+          <li>Objects in reflection barely illuminated and reflections do not appear in flash-only images.</li>
+        </ul>
+
+        <h4>Why is the reflection-free flash-only cue (RFC) robust?</h4>
+		<ul style="list-style-type: disc; line-height: 180%; font-size: 20px;">
+          <li>This cue is robust since it is independent of the appearance and strength of reflection.</li>
+          <li>The flash-only image can be obtained under arbitrary illumination.</li>
+        </ul>      		
+
+		<!-- <h3 style="margin-block-start: 1.2em;">Image Type</h3>
+
+		<p style="text-align: left; margin-block-end: 0em;">We sort the data based on the smoothness of reflection and transmission.</p>
+
+		<table class="styled-table" style="margin: 0px 0">
+		    <thead>
+		        <tr>
+		            <th>BRST (blurry reflection and sharp transmission)</th>
+		            <th>SRST (sharp reflection and sharp transmission)</th>
+		            <th>BRBT (blurry reflection and blurry transmission)</th>
+		            <th>Total</th>    
+		        </tr>
+		    </thead>
+		    <tbody>
+		        <tr>
+		            <td>To be filled</td>
+		            <td>To be filled</td>
+		            <td>To be filled</td>
+		            <td>6000 (1600)</td>
+		        </tr>
+		        
+		    </tbody>
+		</table> -->      		
+		
+
+
+		
+		<h3 style="margin-block-start: 1.7em;">BibTeX</h3>
+		<p style="margin-block-end: 0em;">Please cite our work if you use data from this site.</p>
+        <pre>
+@InProceedings{Lei_2021_RFC,
+    author    = {Chenyang Lei and Qifeng Chen},
+    title     = {Robust Reflection Removal with Reflection-free Flash-only Cues},
+    booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    year      = {2021}
+}</pre>
+		
+
+	</div>
+
+
+</div>
+
+
+
+	
+
+
+	<div id="copyright" class="container">
+		<p>&copy; 2021. All rights reserved. | Developed by Yankun Zhao.</p>
+	</div>
+
+</body>
+</html>
