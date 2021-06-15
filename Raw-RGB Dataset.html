@@ -57,12 +57,12 @@
 		</div>
 
 		
-			<p style="text-align: left;">We construct a new real-scene dataset named <strong>RSR4</strong> that is an order of magnitude larger than existing real-world datasets for reflection removal. Our dataset consists of ground-truth reflection, transmission, and mixture images in both raw and RGB formats with diverse glass types and environments.</p>
+			<p style="text-align: left;">We construct a new real-scene dataset named <strong>LDR (Labeled, Diverse, Real-world)</strong> that is an order of magnitude larger than existing real-world datasets for reflection removal. Our dataset consists of ground-truth reflection, transmission, and mixture images in both RAW and RGB formats with diverse glass types and environments.</p>
 		
 
 		<div id="three-column">
 
-			<div class="boxA">
+			<div class="boxA" style="margin-left: 40%;">
 				<div class="box">
 					<a href="">
 	                    <img src="./images/paper.PNG" width="60%" height="120px" style="border: 2px outset gray; border-radius: 10px;"><br>
@@ -75,7 +75,7 @@
                 </div>
 			</div>
 
-			<div class="boxB">
+			<!-- <div class="boxB">
 				<div class="box">
 					<a href="">
 	                    <img src="./images/youtube_icon.png" width="60%" height="120px"><br>	                    
@@ -99,7 +99,7 @@
 	                	<p style="margin-block-end: 0em;"><strong>Code (To Be Released)</strong></p>
 	                </a>
 				</div>
-			</div>
+			</div> -->
 
 			<div class="container" style="width: 100%; overflow: hidden;">
 				<h3>Motivation</h3>
@@ -131,20 +131,20 @@
 		    <thead>
 		        <tr>
 		            <th>Number of Glasses</th>
-		            <th>Data Format</th>
-		            <th>#GenReal Data</th>
+		            <th>Data Categories</th>
+		            <th>Wild Data</th>
 		            <th>Alignment</th>
 		            <th>Dynamic Transmission</th>
 		            <th>Curved Glasses</th>
 		            <th>Raw Data</th>
-		            <th>Training Data</th>
+		            <th>Training Set</th>
 		        </tr>
 		    </thead>
 		    <tbody>
 		        <tr>
 		            <td>&gt200</td>
-		            <td><em>M, T, R</em></td>
-		            <td>6000 (1600)</td>
+		            <td>Yes</td>
+		            <td>1063</td>
 		            <td>Perfect</td>
 		            <td>Yes</td>
 		            <td>Yes</td>
@@ -157,22 +157,21 @@
 
 
 		
-		<p style="text-align: left;">This dataset is collected mainly by three cameras: a DSLR (Digital Single-Lens Reflex) camera Canon EOS 50D, a MILC (Mirrorless Interchangeable Lens Cameras) Nikon Z6, and a smartphone camera Huawei Mate30. The total number of images in our dataset is 6,000, where 1,600 triple sets and more than 1,000 test data are provided. The resolution for each image triple-set is different. In each triple-set, we provide a mixed image <em>M</em>, a transmission image <em>T</em>, and a reflection image <em>R</em>. Both raw data and RGB data are provided in our dataset. We sort the images according to different criteria, including the smoothness of reflection and transmission, the relative intensity of reflection and transmission, and the ghosting effect of reflection.</p>
+		<p style="text-align: left;">This dataset is collected mainly by three cameras: a DSLR (Digital Single-Lens Reflex) camera Canon EOS 50D, a MILC (Mirrorless Interchangeable Lens Cameras) Nikon Z6, and a smartphone camera Huawei Mate30. In total, 1063 image triple-sets <em>(M, R, T)</em> are provided. The resolution for each image triple-set is different. In each triple-set, we provide a mixed image <em>M</em>, a reflection image <em>R</em>, and a transmission image <em>T</em>. Both RAW data and RGB data are provided in our dataset. We sort the images according to different criteria, including the smoothness of reflection and transmission, the relative intensity of reflection and transmission, and the ghosting effect of reflection.</p>
 		
 
 		<ul class="actions">
-			<li><a href="" class="button">Download Dataset (To Be Released)</a></li>
+			<li><a href="https://github.com/XUHUAKing/LDR-download-scripts" class="button">Download Dataset (7.45GB)</a></li>
 		</ul>
-		<p style="text-align: center;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please contact <a href="mailto:leichenyang7@gmail.com">leichenyang7@gmail.com</a> if you need it now.</p>
+		<!-- <p style="text-align: center;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please contact <a href="mailto:leichenyang7@gmail.com">leichenyang7@gmail.com</a> if you need it now.</p> -->
 
 		
 		<h3 style="margin-block-start: 0em;">Advantage</h3>
 		<ul style="list-style-type: disc; line-height: 180%; font-size: 20px;">
-          <li>Real scenes</li>
+          <li>Data categorization</li>
           <li>Perfect alignment</li>
-          <li>Glass diversity</li>
-          <li>Raw data space</li>
-          <li>Large scale</li>
+          <li>Diversity</li>
+          <li>Large-scale data</li>
         </ul>      		
 		
 
